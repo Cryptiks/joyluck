@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+
+    //link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
+    //link(rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css")
+
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js")
+
+    script(src="/javascripts/script.js")
+  body(ng-app="app")
+    div(class="container")
+      header
+        h1 Joy Luck Palace
+        figure
+          img
+      nav
+        ul
+          li
+            a(href="#") Home
+          li
+            a(href="#about") About
+          li
+            a(href="#menu") Menu
+          li
+            a(href="#contact") Contact
+
+    div(id="main")
+      {{message}}
+      div(ng-view)
+
+    block content
+
+    hr
+
+    footer
+      p(class="credit") Joy Luck Palace 98 Mott Street, New York, NY 10013
+      p(class="credit") Little Italy, Chinatown
